@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter</title>
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="./resources/CSS/style.css">
+    <link rel="stylesheet" href="./resources/CSS/index.css">
+    <!-- JS FILES FOR GAME RUNNING -->
+    <script type="text/javascript" src="./resources/JS/assetmanager.js"></script>
+    <script type="text/javascript" src="./resources/JS/others/timer.js"></script>
+    <script type="text/javascript" src="./resources/JS/gameengine.js"></script>
+    <script type="text/javascript" src="./resources/JS/others/utlis.js"></script>
+    <script type="text/javascript" src="./resources/JS/main.js"></script>
+
+    <script type="text/javascript" src="./resources/JS/player/player.js"></script>
+    <script type="text/javascript" src="./resources/JS/others/boundingcircle.js"></script>
+    <script type="text/javascript" src="./resources/JS/others/bullet.js"></script>
+    <script type="text/javascript" src="./resources/JS/others/hurdle.js"></script>
+    <script type="text/javascript" src="./resources/JS/enemy/enemy.js"></script>
+    <script type="text/javascript" src="./resources/JS/others/uicontroller.js"></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782423060976901"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="text-center background-black text-white">
+    <!-- Main Menu -->
+    <div id="menu" class="display-full background-black text-white">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="p-5">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="text-center align-items-center">
+                                <h1 class="text-lg-center font-weight-bolder">Space Shooter</h1>
+                                <button onclick="startGame()" class="btn btn-lg btn-outline-light m-2 pr-4 pl-4"> Start
+                                </button>
+                                <br>
+                                <button id="levels" onclick="seeLevels()" class="btn btn-lg btn-outline-light m-2 pr-4 pl-4"> Levels </button>
+                                <br>
+                                <button id="sound" onclick="changeSoundState()" class="btn btn-lg btn-outline-light m-2 pr-4 pl-4">  Sound OFF </button>
+                                <br>
+                                <button onclick="quitGame()" class="btn btn-lg btn-outline-light m-2 pr-4 pl-4"> Quit </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LEVLES MENU -->
+    <div id="level-menu" style="display: none;" class="display-full background-black text-white">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="p-5">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h1>Levels</h1>
+                            <h5 id="level01">Level 01 -- Current</h5>
+                            <h5 id="level02">Level 02 -- Unlock</h5>
+                            <h5 id="level03">Level 03 -- Unlock</h5>
+                            <h5 id="level04">Level 04 -- Unlock</h5>
+                            <h5 id="level05">Level 05 -- Unlock</h5>
+                            <h5 id="level06">Level 06 -- Unlock</h5>
+                            <h5 id="level07">Level 07 -- Unlock</h5>
+                            <h5 id="level08">Level 08 -- Unlock</h5>
+                            <h5 id="level09">Level 09 -- Unlock</h5>
+                            <h5 id="level10">Level 10 -- Unlock</h5>
+                            <button onclick="backToMain()" class="btn btn-lg btn-outline-light m-2 pr-4 pl-4"> Go Back </button>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  background-animation CLASS ADDING TO MOVE BACKGROUND -->
+    <div id="game" style="display: none;">
+        <canvas id="board" width="500" class="shadow background-animation-1 background-purple"></canvas>
+        <div id="life">
+            <img id="level-ship">
+            <img src="./resources/PNG/UI/numeralX.png">
+            <img id="life-count">
+        </div>
+        <div id="score">
+            <img id="number5">
+            <img id="number4">
+            <img id="number3">
+            <img id="number2">
+            <img id="number1">
+        </div>
+        <h1 id="game-state" style="display: none;"></h1>
+        <h2 id="level">Level</h2>
+        <Button id="leftBtn" class="btn btn-light control-btn">Left</Button>
+        <Button id="shootBtn" class="btn btn-light control-btn">Shoot</Button>
+        <Button id="rightBtn" class="btn btn-light control-btn">Right</Button>
+    </div>
+</body>
+
+</html>

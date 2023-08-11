@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'GameFont';
+    src: url('./Fonts/kenvector_future.ttf') format('truetype');
+}  
+
+body,
+html {
+    height: 100%;
+    font-family: 'GameFont';
+    caret-color: transparent;
+    overflow: hidden;
+    cursor: url("../PNG/UI/cursor.png") , default;
+    cursor: url("../PNG/UI/cursor.png") , pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+
+.control-btn
+{
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    display: none;
+    position: absolute;    
+}
+
+#life
+{
+    position: absolute;
+    top: 12%;
+    left: 38%;
+}
+
+
+#game-state
+{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    left: 0%;
+}
+
+#score
+{
+    position: absolute;
+    top: 12%;
+    right: 32%;
+}
+
+#leftBtn
+{
+    bottom: 2%;
+    left: 32%;
+}
+
+#rightBtn
+{
+    bottom: 2%;
+    right: 32%;
+}
+
+#shootBtn
+{
+    bottom: 2%;
+    left: 0%;
+}
+
+#level
+{
+    top: 3%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
+}
+
+@media (max-width: 1024px) {
+    .control-btn
+    {
+        display: block;
+    }   
+}
+
+.background-animation-1
+{
+    animation: move_background 50s linear infinite;
+}
+
+.background-animation-2
+{
+    animation: move_background 40s linear infinite;
+}
+
+.background-animation-3
+{
+    animation: move_background 35s linear infinite;
+}
+
+.background-animation-4
+{
+    animation: move_background 30s linear infinite;
+}
+
+.background-animation-5
+{
+    animation: move_background 25s linear infinite;
+}
+
+.background-animation-6
+{
+    animation: move_background 20s linear infinite;
+}
+
+.background-animation-7
+{
+    animation: move_background 15s linear infinite;
+}
+
+.background-animation-8
+{
+    animation: move_background 10s linear infinite;
+}
+
+.background-animation-9
+{
+    animation: move_background 5s linear infinite;
+}
+
+.background-animation-10
+{
+    animation: move_background 2s linear infinite;
+}
+
+@keyframes move_background
+{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 0px 2122px;
+    }
+}
+
+.background-black {
+    background-image: url("../Backgrounds/black.png");
+    background-size: contain;
+}
+
+.background-blue {
+    background-image: url("../Backgrounds/blue.png");
+    background-size: contain;
+}
+
+.background-dark-purple {
+    background-image: url("../Backgrounds/darkPurple.png");
+    background-size: contain;
+}
+
+.background-purple {
+    background-image: url("../Backgrounds/purple.png");
+    background-size: contain;
+}
